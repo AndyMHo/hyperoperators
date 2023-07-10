@@ -8,6 +8,15 @@ function increase() {
     exponent += increase_per_click
 }
 
+function get_expos() {
+    exponent = 0
+    if (isFinite(base)) {
+        exponentials += Math.round(Math.log10(base ** exponent))
+    } else {
+        exponentials += 308
+    }
+}
+
 function tetrate() {
     if (base ** exponent == Infinity) {
         base += 1
