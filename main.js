@@ -10,11 +10,7 @@ function increase() {
 
 function get_expos() {
     exponent = 0
-    if (isFinite(base ** exponent)) {
-        exponentials += Math.round(Math.log10(base ** exponent))
-    } else {
-        exponentials += 308
-    }
+    exponentials += Math.min(Math.round(Math.log10(base ** exponent)), 308)
 }
 
 function tetrate() {
